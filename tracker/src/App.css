@@ -4,3 +4,15 @@ nav {
 a {
   margin: 1%;
 }
+.home-div {
+  border: solid black;
+  margin: 2%;
+}
+.monster-pics {
+  width: 45%;
+  height: 34%;
+}
+.location-cards img{
+  width: 10%;
+  height: 10%;
+}

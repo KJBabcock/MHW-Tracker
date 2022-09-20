@@ -1,10 +1,17 @@
+import { Link } from "react-router-dom";
+
 function Home(props) {
     return(
         <>
-        <div><a href = "/forrest">Ancient Forrest</a></div>
-        <div><a href = "/waste">Wildspire Waste</a></div>
-        <div><a href = "/highlands">Coral Highlands</a></div>
-        <div><a href = "/Vale">Rotten Vale</a></div>
+        {props.monsters ? 
+        <>
+        <Link to ={"/forrest"}><div className="home-div">Ancient Forrest</div></Link>
+        <Link to ={"/waste"}><div className="home-div">Wildspire Waste</div></Link>
+        <Link to ={"/highlands"}><div className="home-div">Coral Highlands</div></Link>
+        <Link to ={"/vale"}><div className="home-div">Rotten Vale</div></Link>
+        </>
+        :null
+        }
         </>
     )
 }

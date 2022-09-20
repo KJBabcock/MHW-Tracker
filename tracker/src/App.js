@@ -24,17 +24,23 @@ useEffect(() => {
   getMonsters();
 }, []);
 
+// monsters ? monsters.forEach(
+//   (monster, idx) => {
+//     setMonsters(monsters[idx].image ='xyz')
+//   }
+// )
+
   return (
     <div className="App">
       <nav><a href = "/">MHW Monster-Tracker</a></nav>
       <Outlet />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home monsters = {monsters}/>} />
         <Route path='/forrest' element={<Forrest monsters = {monsters}/>} />
         <Route path='/highlands' element={<Highlands monsters = {monsters}/>} />
         <Route path='/vale' element={<Vale monsters = {monsters}/>} />
         <Route path='/waste' element={<Waste monsters = {monsters}/>} />
-        <Route path='/:monster' element={<Monster monsters = {monsters}/>} />
+        <Route path='/:id' element={<Monster monsters = {monsters}/>} />
       </Routes>
     </div>
   );
