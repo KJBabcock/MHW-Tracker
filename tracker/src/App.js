@@ -7,6 +7,10 @@ import Highlands from './components/Highlands';
 import Vale from './components/Vale';
 import Waste from './components/Waste';
 import Monster from './components/Monster';
+import Strategies from './components/Strategies';
+import CreateStrategy from './components/CreateStrategy';
+import StrategyShow from './components/StrategyShow';
+import StrategyEdit from './components/StrategyEdit';
 
 function App() {
   
@@ -16,7 +20,7 @@ function App() {
   const getMonsters = async () => {
     const response = await fetch(URL);
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     setMonsters(data);
 };
 
@@ -24,15 +28,26 @@ useEffect(() => {
   getMonsters();
 }, []);
 
-// monsters ? monsters.forEach(
-//   (monster, idx) => {
-//     setMonsters(monsters[idx].image ='xyz')
-//   }
-// )
+const URL2 = "https://mhw-backend.herokuapp.com/";
+const [strategies, setStrategies] = useState(null)
+
+const getStrategies = async () => {
+    const response = await fetch(URL2);
+    const data = await response.json();
+    // console.log(data);
+    setStrategies(data);
+};
+
+useEffect(() => {
+    getStrategies();
+}, []);
 
   return (
     <div className="App">
-      <nav><a href = "/">MHW Monster-Tracker</a></nav>
+      <nav>
+        <a href = "/">MHW Monster-Tracker</a>
+        <a href = "/strategies">Strategy Discussion</a>
+      </nav>
       <Outlet />
       <Routes>
         <Route path='/' element={<Home monsters = {monsters}/>} />
@@ -41,6 +56,10 @@ useEffect(() => {
         <Route path='/vale' element={<Vale monsters = {monsters}/>} />
         <Route path='/waste' element={<Waste monsters = {monsters}/>} />
         <Route path='/:id' element={<Monster monsters = {monsters}/>} />
+        <Route path='/strategies' element={<Strategies strategies = {strategies}/>} />
+        <Route path='/create_strategies' element={<CreateStrategy />} />
+        <Route path='/strategies/:id' element={<StrategyShow strategies = {strategies}/>} />
+        <Route path='/strategies/:id/edit' element={<StrategyEdit strategies = {strategies}/>} />
       </Routes>
     </div>
   );

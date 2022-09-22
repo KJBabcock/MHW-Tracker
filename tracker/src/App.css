@@ -12,7 +12,13 @@ a {
   width: 45%;
   height: 34%;
 }
+.location-cards div{
+  border: solid black;
+}
 .location-cards img{
   width: 10%;
   height: 10%;
+}
+.monster-show {
+  text-align: center;
 }
