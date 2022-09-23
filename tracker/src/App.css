@@ -35,6 +35,9 @@ h1 {
   text-decoration: underline;
   margin: 4%;
 }
+h2 {
+  margin: 5%;
+}
 a {
   text-decoration: none;
   margin: 1%;
@@ -168,14 +171,18 @@ a {
   background-color: rgb(0, 0, 0, .45);
   width: 45%;
   padding: 0%;
-  text-align: center
+  text-align: center;
+  font-size: 110%;
 }
 .monsterBox img{
   width: 30%;
   height: 80%;
-  padding-right: 5%;
+  padding-right: 7%;
   padding-top: 2.5%;
-  padding-left: 2%;
+  padding-left: 10%;
+}
+.monsterBox p{
+  margin-top: 12%;
 }
 .monster-show-box {
   display: flex;
@@ -193,7 +200,7 @@ a {
 }
 .resistances {
   display: flex;
-  margin-bottom: 20%;
+  margin-bottom: 15%;
   margin-top: 2%;
   margin-left: 2%;
 }
@@ -201,7 +208,7 @@ a {
   display: flex;
   position: absolute;
   border: solid antiquewhite;
-  width: 18%;
+  width: 17%;
   padding: 1% 4% 1% 1%;
   margin-left: 40%;
   margin-top: 13%;
