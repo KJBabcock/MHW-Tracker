@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function CreateStrategy(props) {
     const initForm = {gamertag: "", title: "", body: ""}
@@ -8,6 +10,8 @@ function CreateStrategy(props) {
     const [gamertag, setGamertag] = useState(initState)
     const [title, setTitle] = useState(initState)
     const [body, setBody] = useState(initState)
+    const navigate = useNavigate();
+
 
     function handleGamertagChange(e) {
         console.log(e.target.value)
@@ -26,6 +30,7 @@ function CreateStrategy(props) {
         setFormRequest(result)
         console.log(result)
         fetch('https://mhw-backend.herokuapp.com/', {method: 'POST', mode: "cors", body: JSON.stringify(result), headers: {"Content-Type": "application/json"}});
+        navigate("/strategies")
     }
 
     return(
@@ -42,7 +47,8 @@ function CreateStrategy(props) {
                 Body:
             <input type="text" name="body" value={body} onChange={handleBodyChange}/>
             </label>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" className="submit" />
+            <p className="end">...</p>
         </form>
     )
 }

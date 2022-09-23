@@ -18,9 +18,9 @@ function Strategies(props) {
     const strategiesArray = []
     function populateStrategies () {
         for (let i=0; i<props.strategies.length; i++) {
-            strategiesArray.push(<div>
-                <p>{props.strategies[i].gamertag}</p>
-                <a href={`/strategies/${props.strategies[i]._id}`}>{props.strategies[i].title}</a>
+            strategiesArray.push(<div className="comment1">
+                <p><span>GamerTag</span>: {props.strategies[i].gamertag}</p>
+                <a href={`/strategies/${props.strategies[i]._id}`} className="strategiesTitle">{props.strategies[i].title}</a>
                 <p>{props.strategies[i].body}</p>
                 <p>comment id: {props.strategies[i]._id}</p>
                 </div>)
@@ -35,11 +35,14 @@ function Strategies(props) {
     return(
         <div>
         <div>
-            <h2>Strategies</h2>
-            <p>Post what worked for you! Maybe it will help someone!</p>
-            <a href = "/create_strategies"><button>Create</button></a>
+            <h1>Strategies</h1>
+            <p className="p-strategy">Post what worked for you! Maybe it will help someone!</p>
+            <a href = "/create_strategies"><button>Create Strategy</button></a>
         </div>
+        <div className="comment">
         {strategiesArray}
+        </div>
+        <p className="end">...</p>
         </div>
     )
 }

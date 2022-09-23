@@ -1,12 +1,49 @@
+.App {
+  background-color: rgb(4, 4, 16);
+  color: antiquewhite
+}
 nav {
   margin: 2%;
+  text-decoration: none;
+  font-size: 150%;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+img {
+  height: 10%;
+  width: 10%;
+}
+button {
+  padding: .5% 2% .5% 2%;
+  margin: 1.5%;
+  border: solid antiquewhite;
+  color: antiquewhite;
+  border-radius: 6%;
+  background-color: rgb(4, 4, 16);
+}
+span {
+  text-decoration: underline;
+}
+input {
+  background-color: rgb(4, 4, 16);
+  border: solid antiquewhite;
+  color: antiquewhite;
+}
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  margin: 4%;
 }
 a {
+  text-decoration: none;
   margin: 1%;
+  color: antiquewhite;
 }
 .home-div {
   border: solid black;
-  margin: 2%;
+  margin: .5%;
+  padding: 6%;
 }
 .monster-pics {
   width: 45%;
@@ -15,10 +52,184 @@ a {
 .location-cards div{
   border: solid black;
 }
-.location-cards img{
-  width: 10%;
-  height: 10%;
-}
 .monster-show {
+  text-align: center;
+}
+.forrest-div {
+  display: flex;
+  justify-content: right;
+  font-size: 250%;
+  border: solid black;
+  color: antiquewhite;
+  margin: .5%;
+  padding: 8%;
+  height: 6%;
+  background-size: cover;
+}
+.forrest-div:hover {
+  border: solid antiquewhite;
+}
+.forrestBox {
+  background-color: rgb(0, 0, 0, .45);
+  width: 35%;
+  padding: 2%;
+  text-align: center;
+  border: solid black;
+}
+.waste-div {
+  display: flex;
+  font-size: 250%;
+  border: solid black;
+  color: antiquewhite;
+  margin: .5%;
+  padding: 8%;
+  height: 6%;
+  background-size: cover;
+}
+.waste-div:hover {
+  border: solid antiquewhite;
+}
+.wasteBox {
+  background-color: rgb(0, 0, 0, .45);
+  width: 35%;
+  padding: 2%;
+  text-align: center;
+  border: solid black;
+}
+.highlands-div {
+  display: flex;
+  justify-content: right;
+  font-size: 250%;
+  border: solid black;
+  color: antiquewhite;
+  margin: .5%;
+  padding: 8%;
+  height: 6%;
+  background-size: cover;
+}
+.highlands-div:hover {
+  border: solid antiquewhite;
+}
+.highlandsBox {
+  background-color: rgb(0, 0, 0, .5);
+  width: 35%;
+  padding: 2%;
+  text-align: center;
+  border: solid black;
+}
+.vale-div {
+  display: flex;
+  font-size: 250%;
+  border: solid black;
+  color: antiquewhite;
+  margin: .5%;
+  padding: 8%;
+  height: 6%;
+  background-size: cover;
+}
+.vale-div:hover {
+  border: solid antiquewhite;
+}
+.valeBox {
+  background-color: rgb(0, 0, 0, .45);
+  width: 35%;
+  padding: 2%;
+  text-align: center;
+  border: solid black;
+}
+/* .location-card {
+  font-size: 200%;
+  padding: 2%
+}
+.location-card:hover {
+  border: solid antiquewhite
+}
+.location-card img{
+  margin: 1%;
+  margin-left: 15%;
+} */
+.monster-div{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 250%;
+  border: solid black;
+  color: antiquewhite;
+  margin: .5%;
+  padding: 5%;
+  height: 6%;
+  background-size: cover;
+}
+.monster-div:hover {
+  border: solid antiquewhite;
+}
+.monsterBox{
+  display: flex;
+  background-color: rgb(0, 0, 0, .45);
+  width: 45%;
+  padding: 0%;
+  text-align: center
+}
+.monsterBox img{
+  width: 30%;
+  height: 80%;
+  padding-right: 5%;
+  padding-top: 2.5%;
+  padding-left: 2%;
+}
+.monster-show-box {
+  display: flex;
+  flex-direction: column;
+  border: solid antiquewhite;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.ailments {
+  display: flex;
+  margin: 2%;
+}
+.resistances {
+  display: flex;
+  margin-bottom: 20%;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+.weaknesses {
+  display: flex;
+  position: absolute;
+  border: solid antiquewhite;
+  width: 18%;
+  padding: 1% 4% 1% 1%;
+  margin-left: 40%;
+  margin-top: 13%;
+}
+.rewards {
+  text-align: left;
+  margin: 3%
+}
+.p-strategy {
+  font-size: 130%;
+}
+.end {
+  text-align: center;
+}
+.submit {
+  margin: 1.5%;
+}
+.comment1 {
+  border: solid antiquewhite;
+  margin: 2%;
+  border-radius: 1%;
+}
+.comment1 a,p {
+  margin: 1.5%;
+}
+.strategiesTitle {
+  text-decoration: underline;
+}
+.submit-form {
   text-align: center;
 }

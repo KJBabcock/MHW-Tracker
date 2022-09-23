@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function StrategyEdit (props) {
     //put request
@@ -9,6 +10,8 @@ function StrategyEdit (props) {
     const [gamertag, setGamertag] = useState(initState)
     const [title, setTitle] = useState(initState)
     const [body, setBody] = useState(initState)
+
+    const navigate = useNavigate();
 
     let commentId = useParams();
 
@@ -30,10 +33,12 @@ function StrategyEdit (props) {
         setFormRequest(result)
         console.log(result)
         fetch(`https://mhw-backend.herokuapp.com/${commentId.id}`, {method: 'PUT', mode: "cors", body: JSON.stringify(result), headers: {"Content-Type": "application/json"}});
+        navigate("/strategies")
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="submit-form">
+            <h1>Edit</h1>
             <label htmlFor="gamertag">
                 GamerTag:
             <input type="text" name="gamertag" value={gamertag} onChange={handleGamertagChange}/>
@@ -46,7 +51,8 @@ function StrategyEdit (props) {
                 Body:
             <input type="text" name="body" value={body} onChange={handleBodyChange}/>
             </label>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" className="submit"/>
+            <p className="end">...</p>
         </form>
     )
 }
